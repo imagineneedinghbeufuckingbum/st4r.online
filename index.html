@@ -1,402 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>@nigga | Ammo.lol</title>
+<head>
     <meta charset="UTF-8">
-    <meta name="description" content="View nigga's profile on Ammo.lol" />
-    <meta name="keywords" content="Ammo.lol, Ammo biolink, Ammo lol, Ammo link" />
-    <meta name="author" content="Ammo.lol Team" />
-    <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="@nigga | Ammo.lol" />
-    <meta property="og:description" content="View nigga's profile on Ammo.lol" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://api.ammo.lol/og?username=nigga&pfpUrl=https://r2.ammo.lol/72fde1c9-2cc6-4ecb-9433-ec1690a1aea0.gif" />
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="l7Wmoe-z9Y4ntzdluxQ-CevEsfj6Vyn7LJFPkK2oMeO-j4AEiOCiXbp8VIWjPFUuau2M9v6FV_Z3Lc-uqWt06A" />
-    
-    <link rel="stylesheet" href="/assets/tailwind-6bfae1627abd77bef65db3758f6b4efd29045d210ce05b6085a48857a8e93238.css" media="all" />
-<link rel="stylesheet" href="/assets/inter-font-8c3e82affb176f4bca9616b838d906343d1251adc8408efe02cf2b1e4fcf2bc4.css" media="all" />
-    <script src="/assets/debugger-2b48536d7ee6f74eef1d16314be3105a3586659e8023b2f5f1f17e5ab7c5f03b.js"></script>
-    <link rel="stylesheet" href="/assets/application-5952e51841b61da324533b68b5d638c1e735eb4d03463217e68cc1e3bc016eda.css" media="all" />
-      <link rel="icon" href="https://r2.ammo.lol/72fde1c9-2cc6-4ecb-9433-ec1690a1aea0.gif" type="image/x-icon" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@iconify/iconify@3.1.1/dist/iconify.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-  </head>
-
-<link rel="stylesheet" href="/assets/userpage-e0d86e5c88a4e8ad44dc33a4586c70d3ffe6c84b26f3392f307b3c6f7eb2c5d8.css" />
-
-<style>
-body {
-font-family: 'Poppins';
-background-image: url('https://r2.ammo.lol/909528a8-e757-48d2-9d34-b4c8da46e08a.png') !important;
-background-size: cover !important;
-background-position: center !important;
-background-color: #ffffff !important;
-width: 100vw;
-height: 100vh;
-margin: 0;
-overflow: hidden;
--webkit-user-drag: none;
--webkit-user-select: none;
-user-select: none;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://r2.ammo.lol/909528a8-e757-48d2-9d34-b4c8da46e08a.png') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  z-index: -1;
-}
-
-.social-links {
-display: flex;
-justify-content: center;
-gap: 10px;
-margin-top: 20px;
-}
-
-.social-icon {
-color: #ffffff;
-transition: transform 0.3s ease-in-out;
-}
-
-.social-icon:hover {
-transform: scale(1.1);
-}
-
-.username-glow, .username-sparkles {
-position: relative;
-display: inline-block;
-}
-
-.username-glow {
-  text-shadow: 0 0 18px #ffffff;
-}
-
-.username-sparkles::after {
-content: '';
-background-image: url('https://r2.ammo.lol/sparkle_white.gif');
-background-size: 100px 100px;
-background-repeat: repeat;
-position: absolute;
-top: -5px;
-left: -5px;
-right: -5px;
-bottom: -2px;
-pointer-events: none;
-opacity: 0.7;
-}
-
-.username-glow.username-sparkles::after {
-top: -10px;
-left: -10px;
-right: -10px;
-bottom: -2px;
-}
-
-.relative-div-custom {
-background-color: rgba(0, 0, 0, 3);
-backdrop-filter: blur(3.2px);
--webkit-backdrop-filter: blur(3.2px);
-border-radius: 20px;
-}
-
-canvas, .cursor-effect {
-  z-index: 9999;
-}
-
-
-@keyframes shine {
-  0% {
-    background-position: 150%;
-  }
-  100% {
-    background-position: -50%;
-  }
-}
-
-.display-name {
-  background: linear-gradient(to right, #ffffff 0%, #007BFF 50%, #ffffff 70%);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 3s linear infinite;
-}
-
-@media (max-width: 425px) {
-  .widgets-row {
-    width: 105% !important;
-  }
-}
-</style>
-
-
-  <div id="backdrop-filter-container" onclick="this.style.opacity='0'; setTimeout(function(){ document.getElementById('backdrop-filter-container').style.display='none'; document.querySelector('.blurred-background-div').classList.add('active'); }, 600);" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; backdrop-filter: blur(9.9px); -webkit-backdrop-filter: blur(9.9px); z-index: 9999; transition: opacity 0.6s ease;">
-    <div id="enter-overlay" class="cursor-pointer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #; opacity: 1; display: flex; justify-content: center; align-items: center;">
-      <p id="enter-text" class="text-center" style="color: #ffffff; font-size: 24px;">wlcm :)</p>
-    </div>
-  </div>
-  <audio loop id="background-audio" style="display: none;" crossorigin="anonymous">
-    <source src="https://r2.ammo.lol/920aa4b9-2ee0-4092-997b-46654d727087.mp3" type="audio/mpeg">
-  </audio>
-
-
-
-<div id="" class="background-effect-div">
-  <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: flex; justify-content: center; align-items: center;" data-volume-control="false">
-      <div class="blurred-background-div w-full max-w-2xl items-center space-y-4 sm:min-w-[500px] mx-auto" 
-          style="
-            height: auto;
-            color:#ffffff;
-              background-color: rgba(0,0,0,0.3);
-            backdrop-filter: blur(3.2px);
-            -webkit-backdrop-filter: blur(3.2px);
-            border-radius: 43px;
-            border-style: Inset;
-            border-width: 2px;
-            border-color: #ffffff;
-            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #000000, 0px 0px 0px #000000;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsidian Troll Site</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .btn {
+            background: #ff5500;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #ff7700;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #2a2a2a;
+            min-width: 200px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
             display: block;
-            z-index: 2;
-            padding-top: 25px;
-            padding-bottom: 25px;
-            padding-left: 25px;
-            padding-right: 25px;
-            position: relative;">
-        <div style="display: flex;">
-                <div style="position: relative; width: 145px; height: 110px; float: left;">
-                    <div style="width: 110px; height: 110px; border-radius: 50%; overflow: hidden;">
-                        <img src="https://r2.ammo.lol/72fde1c9-2cc6-4ecb-9433-ec1690a1aea0.gif" alt="User avatar" style="width: 100%; height: 100%; object-fit: cover; -webkit-user-drag: none;">
-                    </div>
-                </div>
-            <div style="user-info-div flex-grow: 1; min-width: 0; max-width: 203px; display: flex; flex-direction: column; justify-content: flex-start; margin-left: -15px;">
-                <div style="">
-                  <div style="display: flex; align-items: center;">
-                    <h1 class="text-left display-name  username-sparkles text-4xl sm:text-4xl font-extrabold text-[#ffffff] cursor-pointer transition duration-300 ease-in-out display-name-tooltip" style="display: inline-block; white-space: nowrap; overflow: visible; margin-right: 10px; font-size: 30px;"
-                        data-tooltip="UID 282"
-                      >
-                      rayden
-                    </h1>
-                      <span style="background-color: rgba(171,171,171, 0.0); display: flex; flex-wrap: nowrap; align-items: center; gap: 5px; padding: 5px 10px; border: 1px solid rgba(209,209,209, 0.3); border-radius: 50px;">
-                          <span class="badge-container" style="display: inline-flex; align-items: center; justify-content: center; " data-tooltip="Verified" data-official="true" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">
-                              <i class='bx bx bxs-badge-check' style="font-size: 23px; color: #ffffff;"></i>
-                          </span>
-                          <span class="badge-container" style="display: inline-flex; align-items: center; justify-content: center; " data-tooltip="Premium" data-official="true" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">
-                              <i class='bx bxl-sketch' style="font-size: 23px; color: #ffffff;"></i>
-                          </span>
-                      </span>
-                  </div>
-                    <div style="width: auto; margin-top: 10px; display: inline-block; white-space: nowrap; overflow: visible; min-height: 28px;">
-                        <p id="typed-description" class="text-xl sm:text-xl text-left" style="white-space: nowrap; display: inline-block; font-size: 17px;"></p><span class="cursor-typed" style="display: inline-block;">|</span>
-                    </div>
-                </div>
-                  <div style="margin-top: 3px;">
-                    <p style="font-size: 13px; color: #ffffff;">Joined 11 months ago</p>
-                  </div>
-            </div>
+            text-decoration: none;
+        }
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Troll Zone</h1>
+    <div class="dropdown">
+        <button class="btn">Troll Like</button>
+        <div class="dropdown-content">
+            <a href="#" onclick="alert('Feature Coming Soon!')">Discord ID to Half Token</a>
         </div>
-          <hr class="mx-10" style="margin-top: 20px; margin-bottom: 20px; border-top: 1px solid #d1d1d1; opacity: 0.3;">
-        <div class="widgets-container" style="display: flex; flex-direction: column; align-items: center;">
-          <div class="widgets-row" style="display: flex; flex-wrap: wrap; justify-content: center; width: 100%;">
-              <div class="widget-item" style="flex: 1; min-width: 300px; padding-left: 5px; padding-right: 5px;">
-                            <div class="user-presence-widget w-full">
-              <div class="widget-container w-full" style="background-color: rgba(171,171,171, 0.0); border-radius: 50px; border: 1px solid rgba(209,209,209, 0.3); padding: 10px; margin-top: 5px; display: flex; flex-direction: column; align-items: center; justify-content: space-between;">
-              <div style="display: flex; flex-direction: row; align-items: center; width: 100%;">
-                <div style="position: relative; display: flex; align-items: center;">
-                  <img src="https://cdn.discordapp.com/avatars/271495934976851979/a_a632160052442cbc36434c7b5125efab" alt="User Avatar" style="min-width: 60px; min-height: 60px; width: 60px; height: 60px; -webkit-user-drag: none; border-radius: 50px; margin-right: 10px;" onerror="handleImageError(this)">
-                    <i class='bx bxs-circle status-icon-div' style='color:#616261; position: absolute; bottom: 0; right: 10px; font-size: 20px; z-index: 2;' data-tooltip="Offline" onmouseover="showTooltip(this)" onmouseout="hideTooltip()"></i>
-                </div>
-                <div style="flex-grow: 1; min-width: 0;">
-                  <div style="font-size: 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center;">
-                    raydengre
-                      <div style="display: flex; align-items: center; margin-left: 5px; gap: 6px;">
-                          <div style="position: relative; width: 16px; height: 16px;" data-tooltip="HypeSquad Bravery" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">
-                            <img src="https://static.wikia.nocookie.net/discord/images/b/b5/Bravery.png" alt="HypeSquad Bravery" style="width: 100%; height: 100%; object-fit: contain;">
-                          </div>
-                      </div>
-                  </div>
-                    <div style="font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Doing absolutely nothing.</div>
-                </div>
-              </div>
-            </div>
-          <script>
-            function handleImageError(imgElement) {
-              imgElement.outerHTML = "<img src='https://cdn.discordapp.com/avatars/801908310004727820/98bcc794bc5d6bffd75072bd75c8b8ab.webp' style='min-width: 60px; min-height: 60px; width: 60px; height: 60px; -webkit-user-drag: none; border-radius: 50px; margin-right: 10px;'>";
-            }
-          </script>
-              </div>
-          </div>
-        </div>
-          <div style="margin-top: 20px; padding-left: 5px; padding-right: 5px; width: 100%; display: flex;">
-            <div style="margin-right: auto;">
-              <span style="background-color: rgba(171,171,171, 0.0); display: flex; flex-wrap: nowrap; align-items: center; gap: 5px; padding: 5px 10px; border: 1px solid rgba(209,209,209, 0.3); border-radius: 50px;">
-                  <div class="profile-views-container" style="display: flex; align-items: center;" data-tooltip="Profile Views">
-                      <i class='bx bxs-show' style="margin-right: 5px; font-size: 22px; pointer-events: none;"></i><span style="font-size: 15px; pointer-events: none;">397</span>
-                  </div>
-                
-                    <div style="width: 1px; height: 20px; background-color: rgba(209,209,209, 0.3); margin: 0 5px;"></div>
-                  
-                  <div class="inline-flex items-center rounded-md relative clan-tag-widget"
-                      data-tooltip-clantag="true" 
-                      data-clan-name="Goat"
-                      data-clan-tag="GOAT"
-                      data-clan-icon="https://r2.ammo.lol/ac33da43-88eb-4d40-93f4-03e7bb505cd6.png"
-                      data-clan-members="1"
-                      data-clan-description="special dudes join this guild"
-                      >
-                    <div class="w-4 h-4 rounded-full overflow-hidden mr-1" style="pointer-events: none;">
-                      <img src="https://r2.ammo.lol/ac33da43-88eb-4d40-93f4-03e7bb505cd6.png" alt="" class="w-full h-full object-cover" style="pointer-events: none;">
-                    </div>
-                    <span class="text-sm" style="color: #ffffff; pointer-events: none;">
-                      GOAT
-                    </span>
-                  </div>
-              </span>
-            </div>
-          </div>
-      </div>
     </div>
-  </div>
-</div>
+</body>
 </html>
-
-<script>
-
-$(document).ready(function(){
-    if (window.matchMedia("(min-width: 768px)").matches) {
-        $('.blurred-background-div').tilt({
-            maxTilt: 7,
-            speed: 1000,
-            perspective: 300,
-            easing: "cubic-bezier(.03,.98,.52,.99)",
-        });
-    }
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var descriptions = "Own /rayden|hustling_247.exe|best services".split("|");
-  var typed = new Typed('#typed-description', {
-    strings: descriptions,
-    typeSpeed: 100,
-    backSpeed: 50,
-    loop: true,
-    startDelay: 500,
-    backDelay: 2000,
-    cursorChar: "|",
-    autoInsertCss: false,
-    showCursor: false,
-  });
-});
-
-  document.addEventListener("DOMContentLoaded", function() {
-    const fullTitle = document.title;
-    const typingSpeed = 200;
-    const erasingSpeed = 200;
-    const pauseDuration = 1500;
-    let currentIndex = 1;
-    let isErasing = false;
-    let isWaiting = false;
-
-    function updateTitle() {
-      if (isWaiting) {
-        setTimeout(updateTitle, 50);
-        return;
-      }
-
-      if (!isErasing && currentIndex < fullTitle.length) {
-        document.title = fullTitle.slice(0, currentIndex + 1);
-        currentIndex++;
-      } else if (isErasing && currentIndex > 1) {
-        document.title = fullTitle.slice(0, currentIndex - 1);
-        currentIndex--;
-      } else {
-        isErasing = !isErasing;
-        isWaiting = true;
-        setTimeout(() => {
-          isWaiting = false;
-          updateTitle();
-        }, pauseDuration);
-        return;
-      }
-
-      setTimeout(updateTitle, isErasing ? erasingSpeed : typingSpeed);
-    }
-
-    document.title = fullTitle[0];
-    updateTitle();
-  });
-
-function copyToClipboard(text) {
-  navigator.clipboard.writeText(text).then(function() {
-    const tooltip = document.getElementById('dynamic-tooltip');
-    if (tooltip) {
-      const originalText = tooltip.textContent;
-      tooltip.textContent = 'Copied!';
-      setTimeout(() => {
-        tooltip.textContent = originalText;
-      }, 2000);
-    }
-  });
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  const backdropFilterContainer = document.getElementById('backdrop-filter-container');
-  const blurredBackgroundDiv = document.querySelector('.blurred-background-div');
-
-  if (backdropFilterContainer) {
-    backdropFilterContainer.addEventListener('click', function() {
-      blurredBackgroundDiv.classList.add('active');
-    });
-  } else {
-    setTimeout(() => {
-      blurredBackgroundDiv.classList.add('active');
-    }, 500);
-  }
-});
-
-
-function logLinkClick(link, socialPlatform) {
-  fetch('/page/log_link_click', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRF-Token': 'vyuXxtRWrUWwtEHZk0dPNpw2razOZMRjwUarQrq04WqWEbFjswX6li1_IjmLbyQRHR-Qosq2um6a-it8vnekYQ'
-    },
-    body: JSON.stringify({ username: "nigga", link: link || '', social_platform: socialPlatform })
-  });
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll('.social-icon').forEach(function(element) {
-    element.addEventListener('click', function(event) {
-      var linkUrl = element.classList.contains('social-copy-icon') ? (element.getAttribute('onclick').match(/'([^']+)'/) ? element.getAttribute('onclick').match(/'([^']+)'/)[1] : '') : element.href;
-      var socialPlatform = element.dataset.platform;
-
-      var clickedLinks = sessionStorage.getItem('clickedLinks') ? JSON.parse(sessionStorage.getItem('clickedLinks')) : {};
-      if (!clickedLinks[linkUrl]) {
-        logLinkClick(linkUrl, socialPlatform);
-        clickedLinks[linkUrl] = true;
-        sessionStorage.setItem('clickedLinks', JSON.stringify(clickedLinks));
-      }
-    });
-  });
-});
-</script>
-<script src="/assets/userpage-763887cee60abe117fa2199a56abd2134bf41432161ed2ea74027842e4db803f.js"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'918ab8339bce1b3e',t:'MTc0MDY4NTk5Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"918ab8339bce1b3e","version":"2025.1.0","r":1,"token":"fcd878ab0b4e467ab32a9f916407b6ce","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
