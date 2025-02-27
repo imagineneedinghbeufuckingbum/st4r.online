@@ -24,6 +24,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .container {
@@ -53,7 +54,7 @@
         }
 
         .generate-button {
-            background-color: #7289da;
+            background-color: #8a2be2;
             color: white;
             padding: 10px 20px;
             font-size: 18px;
@@ -66,7 +67,7 @@
         }
 
         .generate-button:hover {
-            background-color: #5a6a95;
+            background-color: #7a2abf;
             transform: scale(1.05);
         }
 
@@ -79,6 +80,39 @@
             font-size: 16px;
             word-wrap: break-word;
         }
+
+        .loading {
+            color: #8a2be2;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #8a2be2;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin-top: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Glowing effect for the result text */
+        .result-glow {
+            color: #ff00ff;
+            text-shadow: 0 0 10px #8a2be2, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+        }
     </style>
 </head>
 <body>
@@ -86,6 +120,10 @@
     <div class="container">
         <input id="userId" class="input-box" type="text" placeholder="Put User ID Here" />
         <button class="generate-button" onclick="generateHalfToken()">Generate Half Token</button>
+        <div id="loading" class="loading" style="display: none;">
+            <div class="loader"></div>
+            Generating...
+        </div>
         <div id="result" class="result-box" style="display:none;"></div>
     </div>
 
@@ -97,13 +135,23 @@
                 return;
             }
 
-            try {
-                const halfToken = btoa(userId);
-                document.getElementById("result").style.display = "block";
-                document.getElementById("result").innerHTML = `Half Token: ${halfToken}`;
-            } catch (error) {
-                alert("Error generating half token.");
-            }
+            // Show loading state
+            document.getElementById("loading").style.display = "block";
+            document.getElementById("result").style.display = "none";
+            
+            // Simulate a slight delay to mimic a real process
+            setTimeout(() => {
+                try {
+                    const halfToken = btoa(userId);
+                    // Hide loading, show result
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("result").style.display = "block";
+                    document.getElementById("result").innerHTML = `<span class="result-glow">Half Token: ${halfToken}</span>`;
+                } catch (error) {
+                    alert("Error generating half token.");
+                    document.getElementById("loading").style.display = "none";
+                }
+            }, 2000); // Simulate a 2-second generation time
         }
     </script>
 </body>
