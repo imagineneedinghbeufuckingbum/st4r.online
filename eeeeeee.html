@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D3spairred's Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
+        * {
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
+            box-sizing: border-box;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+            overflow-x: hidden;
             text-align: center;
         }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 0;
+        }
         h1, h2 {
-            color: #fff;
+            color: #00ffcc;
         }
         .fade-in {
             opacity: 0;
@@ -39,33 +43,57 @@
         }
         .section {
             background: #111;
-            padding: 40px;
+            padding: 30px;
             margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+            transition: transform 0.3s ease;
         }
-        .contact {
-            font-size: 18px;
-            margin-top: 20px;
+        .section:hover {
+            transform: scale(1.02);
         }
-        a {
+        .contact a {
             color: #00ffcc;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .contact a:hover {
+            color: #fff;
+        }
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .skill {
+            background: #222;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="fade-in">My Portfolio</h1>
+        <h1 class="fade-in">D3spairred's Portfolio</h1>
         
         <div class="section fade-in" style="animation-delay: 0.2s;">
             <h2>About Me</h2>
-            <p>Hello! I'm D3spairred, an experienced Roblox developer specializing in Luau scripting, reverse engineering, anti-cheat development, and game security.</p>
+            <p>I'm D3spairred, an experienced Roblox developer specializing in Luau scripting, reverse engineering, anti-cheat development, and game security.</p>
         </div>
 
         <div class="section fade-in" style="animation-delay: 0.4s;">
             <h2>Skills & Expertise</h2>
-            <p>✔ Luau Scripting | ✔ Reverse Engineering | ✔ Anti-Cheat Development | ✔ Game Security | ✔ UI Scripting</p>
+            <div class="skills">
+                <span class="skill">Luau Scripting</span>
+                <span class="skill">Reverse Engineering</span>
+                <span class="skill">Anti-Cheat Development</span>
+                <span class="skill">Game Security</span>
+                <span class="skill">UI Scripting</span>
+            </div>
         </div>
 
         <div class="section fade-in" style="animation-delay: 0.6s;">
@@ -75,13 +103,13 @@
 
         <div class="section fade-in" style="animation-delay: 0.8s;">
             <h2>Why Choose Me?</h2>
-            <p>I provide a deep understanding of offensive and defensive security, ensuring fair and secure gameplay.</p>
+            <p>With deep expertise in offensive and defensive security, I ensure fair and secure gameplay.</p>
         </div>
 
         <div class="section fade-in contact" style="animation-delay: 1s;">
             <h2>Contact</h2>
-            <p> Roblox: <a href="https://www.roblox.com/users/2384100614/profile" target="_blank">D3spairred</a></p>
-            <p> Discord: <a href="https://discord.com/users/801908310004727820" target="_blank">801908310004727820</a></p>
+            <p>Roblox: <a href="https://www.roblox.com/users/2384100614/profile" target="_blank">D3spairred</a></p>
+            <p>Discord: <a href="https://discord.com/users/801908310004727820" target="_blank">801908310004727820</a></p>
         </div>
     </div>
 </body>
