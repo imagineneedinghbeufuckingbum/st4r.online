@@ -5,98 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star's Profile</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             background-color: #141414;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: 'Arial', sans-serif;
         }
-        .profile-container {
-            background: linear-gradient(135deg, #ff7c7c, #ff7cbf);
-            border-radius: 20px;
-            padding: 30px;
-            width: 300px;
+        .profile-card {
+            background: #333;
+            border-radius: 15px;
+            padding: 25px;
             text-align: center;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            width: 320px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
             transition: transform 0.4s ease, box-shadow 0.3s ease;
         }
-        .profile-container:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        .profile-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
         }
-        .profile-pic {
-            width: 120px;
-            height: 120px;
+        .avatar {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            border: 3px solid white;
             margin-bottom: 20px;
-            transition: transform 0.4s ease, box-shadow 0.3s ease;
+            border: 5px solid #ff77ff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .profile-pic:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        .avatar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 119, 255, 0.5);
         }
-        .username {
-            font-size: 1.6rem;
+        .profile-name {
+            font-size: 1.8rem;
+            color: #fff;
             font-weight: bold;
-            color: white;
-            margin-bottom: 10px;
-            text-transform: uppercase;
+            margin: 10px 0;
             letter-spacing: 1px;
-            transition: color 0.3s ease;
+            text-transform: uppercase;
         }
         .discord-id {
-            font-size: 1.2rem;
             color: #7289da;
+            font-size: 1.1rem;
             margin-bottom: 15px;
-            transition: color 0.3s ease;
+            font-weight: 500;
         }
         .emoji {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            color: #ff77ff;
             margin-bottom: 20px;
             transition: transform 0.3s ease;
         }
         .emoji:hover {
             transform: rotate(360deg);
         }
-        .roblox-link {
-            display: inline-block;
-            padding: 12px 20px;
-            background-color: #3c9c52;
-            border-radius: 25px;
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
+        .profile-button {
+            background-color: #5bff7f;
+            color: #fff;
+            font-size: 1.2rem;
             font-weight: bold;
-            transition: background-color 0.4s ease, transform 0.3s ease;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        .roblox-link:hover {
-            background-color: #5cbe74;
-            transform: translateY(-5px);
+        .profile-button:hover {
+            background-color: #4cc26f;
+            transform: translateY(-3px);
         }
-        .roblox-link:active {
+        .profile-button:active {
             transform: translateY(0);
+        }
+        .footer {
+            margin-top: 20px;
+            color: #888;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
-    <div class="profile-container">
-        <img src="https://cdn.discordapp.com/avatars/801908310004727820/c1ff9abbe585e408c9b106b3cccf3d68.png?size=1024" alt="Profile Picture" class="profile-pic">
-        <div class="username">
-            .st4r3
-        </div>
-        <div class="discord-id">
-            Discord ID: .st4r3
-        </div>
-        <div class="emoji">
-            ⭐
-        </div>
-        <a href="https://www.roblox.com/users/2384100614/profile" target="_blank" class="roblox-link">
-            Visit Roblox Profile
-        </a>
+    <div class="profile-card">
+        <img src="https://cdn.discordapp.com/avatars/801908310004727820/c1ff9abbe585e408c9b106b3cccf3d68.png?size=1024" alt="Profile Picture" class="avatar">
+        <div class="profile-name">.st4r3</div>
+        <div class="discord-id">Discord ID: 801908310004727820 </div>
+        <div class="emoji">⭐</div>
+        <a href="https://www.roblox.com/users/2384100614/profile" target="_blank" class="profile-button">Visit Roblox Profile</a>
+        <div class="footer">HI.</div>
     </div>
 </body>
 </html>
