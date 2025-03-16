@@ -13,7 +13,7 @@
         }
 
         body {
-            background: #121212;
+            background-color: #121212;
             color: #f2f2f2;
             font-family: 'Roboto', sans-serif;
             display: flex;
@@ -21,91 +21,145 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            overflow: hidden;
         }
 
-        .profile-container {
+        .bio-link-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             background: linear-gradient(135deg, #252525, #1f1f1f);
-            border-radius: 20px;
-            padding: 50px;
+            border-radius: 25px;
+            padding: 40px;
             width: 380px;
             box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
             text-align: center;
             transition: all 0.3s ease-in-out;
         }
 
-        .profile-container:hover {
+        .bio-link-container:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 50px rgba(0, 0, 0, 0.7);
         }
 
-        .profile-container img {
+        .bio-link-container img {
             border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            border: 4px solid #ff4e00;
+            width: 150px;
+            height: 150px;
+            border: 5px solid #ff4e00;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .profile-container img:hover {
-            transform: scale(1.1) rotate(10deg);
-            box-shadow: 0 0 20px rgba(255, 78, 0, 0.8);
+        .bio-link-container img:hover {
+            transform: scale(1.1) rotate(12deg);
+            box-shadow: 0 0 25px rgba(255, 78, 0, 0.8);
         }
 
-        .profile-container h1 {
-            font-size: 2.2rem;
+        .bio-link-container h1 {
+            font-size: 2.5rem;
             margin-top: 20px;
             font-weight: 700;
             color: #ff4e00;
+            letter-spacing: 2px;
         }
 
-        .profile-container p {
-            font-size: 1.1rem;
+        .bio-link-container p {
+            font-size: 1.2rem;
             color: #aaa;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             font-weight: 300;
+            letter-spacing: 1px;
         }
 
-        .profile-container .links {
+        .bio-link-container .links {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 25px;
         }
 
-        .profile-container .links a {
+        .bio-link-container .links a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             background-color: #ff4e00;
             color: white;
-            padding: 14px 25px;
-            border-radius: 8px;
+            padding: 16px 24px;
+            border-radius: 12px;
             font-weight: 600;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 1.2rem;
             transition: all 0.3s ease;
             transform: translateY(0);
         }
 
-        .profile-container .links a:hover {
+        .bio-link-container .links a:hover {
             background-color: #d85c00;
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-7px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
         }
 
-        .profile-container .links a svg {
-            margin-right: 10px;
-            width: 22px;
-            height: 22px;
+        .bio-link-container .links a svg {
+            margin-right: 12px;
+            width: 25px;
+            height: 25px;
         }
 
-        .profile-container .links a span {
-            font-size: 1.1rem;
+        .bio-link-container .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        .bio-link-container .footer a {
+            color: #ff4e00;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Animation for elements */
+        .bio-link-container h1,
+        .bio-link-container p {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .bio-link-container h1 {
+            animation-delay: 0.3s;
+        }
+
+        .bio-link-container p {
+            animation-delay: 0.6s;
+        }
+
+        .bio-link-container .links a {
+            animation: fadeInUp 1s forwards;
+        }
+
+        .bio-link-container .links a:nth-child(1) {
+            animation-delay: 0.9s;
+        }
+
+        .bio-link-container .links a:nth-child(2) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="profile-container">
+    <div class="bio-link-container">
         <!-- Profile Picture -->
         <img src="https://cdn.discordapp.com/avatars/801908310004727820/c1ff9abbe585e408c9b106b3cccf3d68.png?size=1024" alt="Profile Picture">
 
@@ -123,6 +177,11 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9l-3 3 3 3V9zM3 4v12h2V6l2 1v6l-2 1v-2l2-1v-3l2 1v3l2-1V8l-2 1v4l2 1V8l-2 1V4H3z"></path></svg>
                 Roblox
             </a>
+        </div>
+
+        <!-- Footer Link -->
+        <div class="footer">
+            <p> pro skid!! <a href="https://www.example.com" target="_blank"></a></p>
         </div>
     </div>
 
