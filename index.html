@@ -11,64 +11,64 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            background-color: #1e1e1e;
-            color: white;
+            background: #121212;
+            color: #f2f2f2;
             font-family: 'Roboto', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            overflow: hidden;
         }
-        
+
         .profile-container {
-            text-align: center;
-            background: linear-gradient(145deg, #2a2a2a, #383838);
+            background: linear-gradient(135deg, #252525, #1f1f1f);
             border-radius: 20px;
-            padding: 40px;
-            width: 400px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            width: 380px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+            text-align: center;
             transition: all 0.3s ease-in-out;
         }
 
         .profile-container:hover {
             transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.7);
         }
 
         .profile-container img {
             border-radius: 50%;
             width: 120px;
             height: 120px;
-            border: 5px solid #ff4e00;
-            transition: all 0.3s ease;
+            border: 4px solid #ff4e00;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .profile-container img:hover {
-            transform: rotate(15deg);
-            box-shadow: 0 0 15px rgba(255, 78, 0, 0.8);
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 0 20px rgba(255, 78, 0, 0.8);
         }
 
         .profile-container h1 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-top: 20px;
-            font-weight: 600;
+            font-weight: 700;
             color: #ff4e00;
         }
 
         .profile-container p {
             font-size: 1.1rem;
-            color: #bbb;
+            color: #aaa;
             margin-bottom: 20px;
+            font-weight: 300;
         }
 
         .profile-container .links {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
         }
 
         .profile-container .links a {
@@ -77,38 +77,29 @@
             justify-content: center;
             background-color: #ff4e00;
             color: white;
-            padding: 12px 20px;
+            padding: 14px 25px;
             border-radius: 8px;
-            font-weight: 500;
+            font-weight: 600;
             text-decoration: none;
             font-size: 1rem;
-            transition: transform 0.2s, background-color 0.3s;
+            transition: all 0.3s ease;
+            transform: translateY(0);
         }
 
         .profile-container .links a:hover {
             background-color: #d85c00;
-            transform: translateY(-4px);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .profile-container .links a svg {
-            margin-right: 8px;
-            width: 20px;
-            height: 20px;
-        }
-        
-        .profile-container .social-icons {
-            margin-top: 20px;
+            margin-right: 10px;
+            width: 22px;
+            height: 22px;
         }
 
-        .profile-container .social-icons a {
-            color: #ff4e00;
-            font-size: 24px;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-
-        .profile-container .social-icons a:hover {
-            color: #d85c00;
+        .profile-container .links a span {
+            font-size: 1.1rem;
         }
     </style>
 </head>
@@ -132,12 +123,6 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9l-3 3 3 3V9zM3 4v12h2V6l2 1v6l-2 1v-2l2-1v-3l2 1v3l2-1V8l-2 1v4l2 1V8l-2 1V4H3z"></path></svg>
                 Roblox
             </a>
-        </div>
-
-        <!-- Social Icons (if needed) -->
-        <div class="social-icons">
-            <a href="https://twitter.com/" target="_blank">🐦</a>
-            <a href="https://github.com/" target="_blank">🐱</a>
         </div>
     </div>
 
