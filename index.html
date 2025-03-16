@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bio Link</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        .profile-container {
+            text-align: center;
+            background: linear-gradient(145deg, #2a2a2a, #383838);
+            border-radius: 20px;
+            padding: 40px;
+            width: 400px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease-in-out;
+        }
 
+        .profile-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .profile-container img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            border: 5px solid #ff4e00;
+            transition: all 0.3s ease;
+        }
+
+        .profile-container img:hover {
+            transform: rotate(15deg);
+            box-shadow: 0 0 15px rgba(255, 78, 0, 0.8);
+        }
+
+        .profile-container h1 {
+            font-size: 2rem;
+            margin-top: 20px;
+            font-weight: 600;
+            color: #ff4e00;
+        }
+
+        .profile-container p {
+            font-size: 1.1rem;
+            color: #bbb;
+            margin-bottom: 20px;
+        }
+
+        .profile-container .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .profile-container .links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ff4e00;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .profile-container .links a:hover {
+            background-color: #d85c00;
+            transform: translateY(-4px);
+        }
+
+        .profile-container .links a svg {
+            margin-right: 8px;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .profile-container .social-icons {
+            margin-top: 20px;
+        }
+
+        .profile-container .social-icons a {
+            color: #ff4e00;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .profile-container .social-icons a:hover {
+            color: #d85c00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <!-- Profile Picture -->
+        <img src="https://cdn.discordapp.com/avatars/801908310004727820/c1ff9abbe585e408c9b106b3cccf3d68.png?size=1024" alt="Profile Picture">
+
+        <!-- Name -->
+        <h1>.st4r3</h1>
+        <p>⭐ d3spairred</p>
+
+        <!-- Bio Links -->
+        <div class="links">
+            <a href="https://discord.com/users/801908310004727820" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.371 0 0 5.372 0 12s5.371 12 12 12 12-5.372 12-12S18.629 0 12 0zm0 22C6.479 22 2 17.521 2 12s4.479-10 10-10 10 4.479 10 10-4.479 10-10 10zm-.002-7.5c-1.486 0-3.012-1.052-4.502-2.698 0-1.692 1.414-2.698 3.01-2.698 1.586 0 3.012 1.052 4.502 2.698 0 1.692-1.414 2.698-3.01 2.698zm0 0" /></svg>
+                Discord
+            </a>
+            <a href="https://www.roblox.com/users/2384100614/profile" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 9l-3 3 3 3V9zM3 4v12h2V6l2 1v6l-2 1v-2l2-1v-3l2 1v3l2-1V8l-2 1v4l2 1V8l-2 1V4H3z"></path></svg>
+                Roblox
+            </a>
+        </div>
+
+        <!-- Social Icons (if needed) -->
+        <div class="social-icons">
+            <a href="https://twitter.com/" target="_blank">🐦</a>
+            <a href="https://github.com/" target="_blank">🐱</a>
+        </div>
+    </div>
+
+</body>
+</html>
