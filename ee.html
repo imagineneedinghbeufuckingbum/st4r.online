@@ -65,8 +65,8 @@
             formData.append("file", file);
 
             try {
-                // Send file to your API for processing/uploading (e.g., Google Cloud Storage, Dropbox, etc.)
-                const response = await fetch('https://your-api-endpoint/upload', {
+                // Send file to File.io API for uploading
+                const response = await fetch('https://file.io', {
                     method: 'POST',
                     body: formData,
                 });
@@ -74,9 +74,9 @@
                 const result = await response.json();
 
                 if (response.ok) {
-                    // Display the download link (Replace with the actual download link provided by your API)
+                    // Display the download link (replace with the actual download link from File.io)
                     document.getElementById('downloadLink').innerHTML = `
-                        <a href="${result.downloadUrl}" target="_blank">Download your file</a>
+                        <a href="${result.link}" target="_blank">Download your file</a>
                     `;
                 } else {
                     alert("File upload failed: " + result.message);
